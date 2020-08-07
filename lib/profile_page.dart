@@ -8,21 +8,21 @@ class ProfilePage extends StatelessWidget {
 
   List<Widget> navButtons() => [
         NavButton(
-          text: "about",
+          text: "About",
           onPressed: () {
-            html.window.open("https://pawan.live", "Pk");
+            // html.window.open("https://pawan.live", "Pk");
           },
         ),
         NavButton(
-          text: "work",
+          text: "Projects",
           onPressed: () {
-            html.window.open("https://pawan.live", "Pk");
+            // html.window.open("https://pawan.live", "Pk");
           },
         ),
         NavButton(
-          text: "contact",
+          text: "Contact",
           onPressed: () {
-            html.window.open("https://pawan.live", "Pk");
+            // html.window.open("https://pawan.live", "Pk");
           },
         ),
       ];
@@ -36,6 +36,7 @@ class ProfilePage extends StatelessWidget {
           elevation: 0.0,
           backgroundColor: Colors.black,
         ),
+        //if mobile:
         drawer: ResponsiveWidget.isSmallScreen(context)
             ? Drawer(
                 child: ListView(
@@ -44,7 +45,11 @@ class ProfilePage extends StatelessWidget {
                 ),
               )
             : null,
-        body: SingleChildScrollView(
+        //else
+
+        body:
+            // ListView.builder(itemBuilder: null)
+            SingleChildScrollView(
           child: AnimatedPadding(
             duration: Duration(seconds: 1),
             padding: EdgeInsets.all(MediaQuery.of(context).size.height * 0.1),
@@ -111,8 +116,7 @@ class PKDot extends StatelessWidget {
         SizedBox(
           width: 5,
         ),
-        AnimatedContainer(
-          duration: Duration(seconds: 1),
+        Container(
           height: 8,
           width: 8,
           decoration: BoxDecoration(
