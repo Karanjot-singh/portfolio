@@ -133,23 +133,39 @@ class NavButton extends StatelessWidget {
   final text;
   final onPressed;
   final Color color;
+  final String imgURL;
 
   const NavButton(
       {Key key,
       @required this.text,
       @required this.onPressed,
-      this.color = Colors.teal})
+      this.imgURL,
+      this.color = Colors.teal,})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return OutlineButton(
-      child: Text(text),
+      child: 
+      imgURL==null?
+      Text(text):Container(
+            margin: EdgeInsets.only(right: 12, left: 12, top: 16),
+            width: 20.0,
+            height: 20.0,
+            decoration: new BoxDecoration(
+              shape: BoxShape.circle,
+              image: new DecorationImage(
+                fit: BoxFit.cover,
+                image: new NetworkImage(imgURL),
+              ),
+            ),
+          ),
       borderSide: BorderSide(
         color: color,
       ),
+      shape: StadiumBorder(),
       onPressed: onPressed,
-      highlightedBorderColor: color,
+      highlightedBorderColor: Colors.blueGrey[50],
     );
   }
 }
@@ -193,12 +209,11 @@ class ProfileInfo extends StatelessWidget {
         height: 10,
       ),
       Text(
-        "A Google Developer Expert for Flutter, Dart & Web Tech.\n"
-        "I am also a youtuber having MTechViral youtube channel\n"
-        "where I make tutorials for technology.",
+        "A member of Google Developer Groups.\n"
+        "Flutter App Developer\n",
         softWrap: true,
         textScaleFactor: 1.5,
-        style: TextStyle(color: Colors.white70),
+        style: TextStyle(color: Colors.blueGrey[50]),
       ),
       SizedBox(
         height: 20,
@@ -290,9 +305,7 @@ class SocialInfo extends StatelessWidget {
   Widget copyRightText() => Text(
         "Karanjot Singh ©️2020",
         textAlign: TextAlign.center,
-        style: TextStyle(
-          color: Colors.blueGrey
-        ),
+        style: TextStyle(color: Colors.blueGrey),
       );
 
   @override
