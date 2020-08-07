@@ -44,7 +44,7 @@ packages:
     source: hosted
     version: "1.14.13"
   cupertino_icons:
-    dependency: "direct main"
+    dependency: "direct overridden"
     description:
       name: cupertino_icons
       url: "https://pub.dartlang.org"
@@ -67,6 +67,31 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_web:
+    dependency: "direct overridden"
+    description:
+      path: "packages/flutter_web"
+      ref: HEAD
+      resolved-ref: c04fb502b842859de07e36954a9390465a5426c0
+      url: "https://github.com/flutter/flutter_web"
+    source: git
+    version: "0.0.0"
+  flutter_web_ui:
+    dependency: "direct overridden"
+    description:
+      path: "packages/flutter_web_ui"
+      ref: HEAD
+      resolved-ref: c04fb502b842859de07e36954a9390465a5426c0
+      url: "https://github.com/flutter/flutter_web"
+    source: git
+    version: "0.0.0"
+  intl:
+    dependency: transitive
+    description:
+      name: intl
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.16.1"
   matcher:
     dependency: transitive
     description:
