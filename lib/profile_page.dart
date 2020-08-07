@@ -33,8 +33,8 @@ class ProfilePage extends StatelessWidget {
       largeScreen: Scaffold(
         backgroundColor: Colors.black,
         appBar: AppBar(
-          elevation: 0.0,
-          backgroundColor: Colors.black,
+          elevation: 5.0,
+          backgroundColor: Colors.teal,
         ),
         //if mobile:
         drawer: ResponsiveWidget.isSmallScreen(context)
@@ -145,15 +145,27 @@ class NavButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return OutlineButton(
-      child: 
-      Text(text),
-      borderSide: BorderSide(
-        color: color,
-      ),
-      shape: StadiumBorder(),
-      onPressed: onPressed,
-      highlightedBorderColor: Colors.blueGrey[50],
+    return Column(
+      children: [
+        OutlineButton(
+          child: 
+          Text(text),
+          borderSide: BorderSide(
+            color: color,
+          ),
+          shape: StadiumBorder(),
+          onPressed: onPressed,
+          highlightedBorderColor: Colors.blueGrey[50],
+        ),
+        // SizedBox(
+        //     width:ResponsiveWidget.isSmallScreen(context)
+        //     ? MediaQuery.of(context).size.height * 0.05:null,
+        //   ),
+        //   SizedBox(
+        //     height:ResponsiveWidget.isSmallScreen(context)
+        //     ?null: MediaQuery.of(context).size.width * 0.05,
+        //   ),
+      ],
     );
   }
 }
@@ -266,12 +278,13 @@ class ProfileInfo extends StatelessWidget {
 class SocialInfo extends StatelessWidget {
   List<Widget> socialMediaWidgets() {
     return [
+      
       NavButton(
         text: "Github",
         onPressed: () {
           html.window.open("https://github.com/Karanjot-singh", "Git");
         },
-        color: Colors.blue,
+        color: Colors.teal,
         imgURL: "GIT.png",
       ),
       NavButton(
@@ -279,7 +292,7 @@ class SocialInfo extends StatelessWidget {
         onPressed: () {
           html.window.open("https://www.linkedin.com/in/karanjot-singh-/", "LinkedIn");
         },
-        color: Colors.blue,
+        color: Colors.teal,
         imgURL: "linked.png",
 
       ),
@@ -288,7 +301,7 @@ class SocialInfo extends StatelessWidget {
         onPressed: () {
           html.window.open("mailto.karanjot19050@iiitd.ac.in", "Fb");
         },
-        color: Colors.blue,
+        color: Colors.teal,
         imgURL: "mail.png",
 
       ),
