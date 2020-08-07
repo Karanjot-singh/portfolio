@@ -147,19 +147,7 @@ class NavButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return OutlineButton(
       child: 
-      imgURL==null?
-      Text(text):Container(
-            margin: EdgeInsets.only(right: 12, left: 12, top: 16),
-            width: 20.0,
-            height: 20.0,
-            decoration: new BoxDecoration(
-              shape: BoxShape.circle,
-              image: new DecorationImage(
-                fit: BoxFit.cover,
-                image: new NetworkImage(imgURL),
-              ),
-            ),
-          ),
+      Text(text),
       borderSide: BorderSide(
         color: color,
       ),
@@ -281,29 +269,34 @@ class SocialInfo extends StatelessWidget {
       NavButton(
         text: "Github",
         onPressed: () {
-          html.window.open("https://github.com/iampawan", "Git");
+          html.window.open("https://github.com/Karanjot-singh", "Git");
         },
         color: Colors.blue,
+        imgURL: "GIT.png",
       ),
       NavButton(
-        text: "Twitter",
+        text: "LinkedIn",
         onPressed: () {
-          html.window.open("https://twitter.com/imthepk", "Twitter");
+          html.window.open("https://www.linkedin.com/in/karanjot-singh-/", "LinkedIn");
         },
         color: Colors.blue,
+        imgURL: "linked.png",
+
       ),
       NavButton(
-        text: "Facebook",
+        text: "Mail",
         onPressed: () {
-          html.window.open("https://facebook.com/thepawankumaar", "Fb");
+          html.window.open("mailto.karanjot19050@iiitd.ac.in", "Fb");
         },
         color: Colors.blue,
+        imgURL: "mail.png",
+
       ),
     ];
   }
 
   Widget copyRightText() => Text(
-        "Karanjot Singh ©️2020",
+        "Karanjot Singh ©️ 2020",
         textAlign: TextAlign.center,
         style: TextStyle(color: Colors.blueGrey),
       );
