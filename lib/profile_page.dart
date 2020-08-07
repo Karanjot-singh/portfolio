@@ -182,7 +182,7 @@ class ProfileInfo extends StatelessWidget {
         style: TextStyle(color: Colors.teal),
       ),
       Text(
-        "Pawan\nKumar",
+        "Karanjot\nSingh",
         textScaleFactor: 5,
         style: TextStyle(
           color: Colors.white,
