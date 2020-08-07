@@ -89,7 +89,7 @@ class NavHeader extends StatelessWidget {
             : MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
-          PKDot(),
+          Dot(),
 //          Spacer(),
           if (!ResponsiveWidget.isSmallScreen(context))
             Row(
@@ -101,13 +101,13 @@ class NavHeader extends StatelessWidget {
   }
 }
 
-class PKDot extends StatelessWidget {
+class Dot extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
       children: <Widget>[
         Text(
-          "PK MTECHVIRAL",
+          "Karanjot Singh",
           textScaleFactor: 2,
           style: TextStyle(
             fontWeight: FontWeight.bold,
@@ -121,7 +121,7 @@ class PKDot extends StatelessWidget {
           width: 8,
           decoration: BoxDecoration(
             shape: BoxShape.circle,
-            color: Colors.orange,
+            color: Colors.teal,
           ),
         ),
       ],
@@ -138,7 +138,7 @@ class NavButton extends StatelessWidget {
       {Key key,
       @required this.text,
       @required this.onPressed,
-      this.color = Colors.orange})
+      this.color = Colors.teal})
       : super(key: key);
 
   @override
@@ -163,12 +163,10 @@ class ProfileInfo extends StatelessWidget {
             ? MediaQuery.of(context).size.height * 0.25
             : MediaQuery.of(context).size.width * 0.25,
         decoration: BoxDecoration(
-          backgroundBlendMode: BlendMode.luminosity,
-          color: Colors.deepOrange,
 //            borderRadius: BorderRadius.circular(40),
           shape: BoxShape.circle,
           image: DecorationImage(
-            image: AssetImage("pk.jpg"),
+            image: AssetImage("karanjot.jpeg"),
             alignment: Alignment.center,
             fit: BoxFit.cover,
           ),
@@ -181,7 +179,7 @@ class ProfileInfo extends StatelessWidget {
       Text(
         "Hi there! My name is",
         textScaleFactor: 2,
-        style: TextStyle(color: Colors.orange),
+        style: TextStyle(color: Colors.teal),
       ),
       Text(
         "Pawan\nKumar",
@@ -290,10 +288,10 @@ class SocialInfo extends StatelessWidget {
   }
 
   Widget copyRightText() => Text(
-        "Pawan Kumar ©️2019",
+        "Karanjot Singh ©️2020",
         textAlign: TextAlign.center,
         style: TextStyle(
-          color: Colors.grey,
+          color: Colors.blueGrey
         ),
       );
 
