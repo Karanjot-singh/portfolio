@@ -1,0 +1,26 @@
+[
+    {
+        "family": "MaterialIcons",
+        "fonts": [
+            {
+                "asset": "https://fonts.gstatic.com/s/materialicons/v42/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2"
+            }
+        ]
+    },
+    {
+        "family": "Montserrat-Bold",
+        "fonts": [
+            {
+                "asset": "Montserrat-Bold.ttf"
+            }
+        ]
+    },
+    {
+        "family": "Montserrat-Regular",
+        "fonts": [
+            {
+                "asset": "Montserrat-Regular.ttf"
+            }
+        ]
+    }
+]
