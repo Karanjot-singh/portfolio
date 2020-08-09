@@ -7,16 +7,16 @@ class ProfilePage extends StatelessWidget {
   const ProfilePage({Key key}) : super(key: key);
 
   List<Widget> navButtons() => [
-        NavButton(
-          text: "About",
-          onPressed: () {
-            // html.window.open("https://pawan.live", "Pk");
-          },
-        ),
+        // NavButton(
+        //   text: "About",
+        //   onPressed: () {
+        //     // html.window.open("https://pawan.live", "Pk");
+        //   },
+        // ),
         NavButton(
           text: "Projects",
           onPressed: () {
-            // html.window.open("https://pawan.live", "Pk");
+            // html.window.open("https://karanjot-singh.blogspot.com", "Projects");
           },
         ),
         NavButton(
