@@ -217,6 +217,7 @@ class ProfileInfo extends StatelessWidget {
         height: 10,
       ),
       Text(
+        "CSE Undergraduate at IIIT Delhi.\n"
         "A member of Google Developer Groups.\n"
         "Flutter App Developer\n",
         softWrap: true,
@@ -235,10 +236,10 @@ class ProfileInfo extends StatelessWidget {
             color: Colors.red,
             onPressed: () {
               html.window.open(
-                  "https://google-developers.appspot.com/community/experts/directory/profile/profile-pawan_kumar",
-                  "GDE");
+                  "https://drive.google.com/file/d/18UDSgXn6rHLRAL635VKVJVqNVmycC6fb/view?usp=sharing",
+                  "Resume");
             },
-            padding: EdgeInsets.all(10),
+            // padding: EdgeInsets.all(10),
           ),
           SizedBox(
             width: 20,
@@ -248,12 +249,12 @@ class ProfileInfo extends StatelessWidget {
               color: Colors.red,
             ),
             shape: StadiumBorder(),
-            child: Text("Say Hi!"),
+            child: Text("Projects"),
             color: Colors.red,
             onPressed: () {
-              html.window.open("https://pawan.live", "Pk");
+              html.window.open("https://karanjot-singh.blogspot.com", "Projects");
             },
-            padding: EdgeInsets.all(10),
+            // padding: EdgeInsets.all(10),
           )
         ],
       )
@@ -337,9 +338,20 @@ class SocialInfo extends StatelessWidget {
         ],
       ),
       smallScreen: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
+        // crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
-          ...socialMediaWidgets(),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              // SizedBox(
+              //   width: 20,
+              // ),
+              ...socialMediaWidgets(),
+            ],
+          ),
+          SizedBox(
+                height: 20,
+              ),
           copyRightText(),
         ],
       ),
