@@ -7,23 +7,34 @@ class ProfilePage extends StatelessWidget {
   const ProfilePage({Key key}) : super(key: key);
 
   List<Widget> navButtons() => [
-        // NavButton(
-        //   text: "About",
-        //   onPressed: () {
-        //     // html.window.open("https://pawan.live", "Pk");
-        //   },
-        // ),
         NavButton(
-          text: "Projects",
+          text: "Github",
           onPressed: () {
-            // html.window.open("https://karanjot-singh.blogspot.com", "Projects");
+            html.window.open("https://github.com/Karanjot-singh", "Git");
           },
+          color: Colors.teal,
+        ),
+        SizedBox(
+          width: 20,
         ),
         NavButton(
-          text: "Contact",
+          text: "LinkedIn",
           onPressed: () {
-            // html.window.open("https://pawan.live", "Pk");
+            html.window.open(
+                "https://www.linkedin.com/in/karanjot-singh-/", "LinkedIn");
           },
+          color: Colors.teal,
+        ),
+        SizedBox(
+          width: 20,
+        ),
+        NavButton(
+          text: "Mail",
+          onPressed: () {
+            html.window
+                .open("https://mailto.karanjot19050@iiitd.ac.in", "Mail");
+          },
+          color: Colors.teal,
         ),
       ];
 
@@ -135,38 +146,35 @@ class NavButton extends StatelessWidget {
   final Color color;
   final String imgURL;
 
-  const NavButton(
-      {Key key,
-      @required this.text,
-      @required this.onPressed,
-      this.imgURL,
-      this.color = Colors.teal,})
-      : super(key: key);
+  const NavButton({
+    Key key,
+    @required this.text,
+    @required this.onPressed,
+    this.imgURL,
+    this.color = Colors.teal,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        OutlineButton(
-          child: 
-          Text(text),
-          borderSide: BorderSide(
-            color: color,
-          ),
-          shape: StadiumBorder(),
-          onPressed: onPressed,
-          highlightedBorderColor: Colors.blueGrey[50],
+    return Container(
+      child: OutlineButton(
+        child: Text(text),
+        borderSide: BorderSide(
+          color: color,
         ),
-        // SizedBox(
-        //     width:ResponsiveWidget.isSmallScreen(context)
-        //     ? MediaQuery.of(context).size.height * 0.05:null,
-        //   ),
-        //   SizedBox(
-        //     height:ResponsiveWidget.isSmallScreen(context)
-        //     ?null: MediaQuery.of(context).size.width * 0.05,
-        //   ),
-      ],
+        shape: StadiumBorder(),
+        onPressed: onPressed,
+        highlightedBorderColor: Colors.blueGrey[50],
+      ),
     );
+    // SizedBox(
+    //     width:ResponsiveWidget.isSmallScreen(context)
+    //     ? MediaQuery.of(context).size.height * 0.05:null,
+    //   ),
+    //   SizedBox(
+    //     height:ResponsiveWidget.isSmallScreen(context)
+    //     ?null: MediaQuery.of(context).size.width * 0.05,
+    //   ),
   }
 }
 
@@ -278,32 +286,33 @@ class ProfileInfo extends StatelessWidget {
 class SocialInfo extends StatelessWidget {
   List<Widget> socialMediaWidgets() {
     return [
-      
       NavButton(
         text: "Github",
         onPressed: () {
           html.window.open("https://github.com/Karanjot-singh", "Git");
         },
         color: Colors.teal,
-        imgURL: "GIT.png",
+      ),
+      SizedBox(
+        width: 20,
       ),
       NavButton(
         text: "LinkedIn",
         onPressed: () {
-          html.window.open("https://www.linkedin.com/in/karanjot-singh-/", "LinkedIn");
+          html.window
+              .open("https://www.linkedin.com/in/karanjot-singh-/", "LinkedIn");
         },
         color: Colors.teal,
-        imgURL: "linked.png",
-
+      ),
+      SizedBox(
+        width: 20,
       ),
       NavButton(
         text: "Mail",
         onPressed: () {
-          html.window.open("mailto.karanjot19050@iiitd.ac.in", "Fb");
+          html.window.open("mailto.karanjot19050@iiitd.ac.in", "Mail");
         },
         color: Colors.teal,
-        imgURL: "mail.png",
-
       ),
     ];
   }
