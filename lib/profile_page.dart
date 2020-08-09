@@ -32,7 +32,7 @@ class ProfilePage extends StatelessWidget {
           text: "Mail",
           onPressed: () {
             html.window
-                .open("https://mailto.karanjot19050@iiitd.ac.in", "Mail");
+                .open("mailto:karanjot19050@iiitd.ac.in", "Mail");
           },
           color: Colors.teal,
         ),
@@ -218,7 +218,7 @@ class ProfileInfo extends StatelessWidget {
       ),
       Text(
         "CSE Undergraduate at IIIT Delhi.\n"
-        "A member of Google Developer Groups.\n"
+        "Member of Google Developer Groups.\n"
         "Flutter App Developer\n",
         softWrap: true,
         textScaleFactor: 1.5,
@@ -311,7 +311,7 @@ class SocialInfo extends StatelessWidget {
       NavButton(
         text: "Mail",
         onPressed: () {
-          html.window.open("mailto.karanjot19050@iiitd.ac.in", "Mail");
+          html.window.open("mailto:karanjot19050@iiitd.ac.in", "Mail");
         },
         color: Colors.teal,
       ),
