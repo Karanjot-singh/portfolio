@@ -1,6 +1,6 @@
 # my_portfolio
 
-A new Flutter project.
+A new Flutter Web project to design a responsive webpage for myself.
 
 ## Getting Started
 
